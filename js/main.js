@@ -29,10 +29,10 @@ function setBars({ a1, a2, a3, a4 }) {
 	a4 = pi(a4);
 	//console.log({ a1, a2, a3, a4 })
 	let total = a1 + a2 + a3 + a4;
-	let p1 = a1 == 0 ? '0%' : (a1 / total).toFixed(1) * 100 + '%';
-	let p2 = a2 == 0 ? '0%' : (a2 / total).toFixed(1) * 100 + '%';
-	let p3 = a3 == 0 ? '0%' : (a3 / total).toFixed(1) * 100 + '%';
-	let p4 = a4 == 0 ? '0%' : (a4 / total).toFixed(1) * 100 + '%';
+	let p1 = a1 == 0 ? '0%' : (a1 / total).toFixed(2) * 100 + '%';
+	let p2 = a2 == 0 ? '0%' : (a2 / total).toFixed(2) * 100 + '%';
+	let p3 = a3 == 0 ? '0%' : (a3 / total).toFixed(2) * 100 + '%';
+	let p4 = a4 == 0 ? '0%' : (a4 / total).toFixed(2) * 100 + '%';
 
 	let bars = $$("label > div");
 	bars[0].style.width = p1;
