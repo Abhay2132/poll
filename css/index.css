@@ -28,6 +28,7 @@ form {
 	padding: 10px 0;
 	border-bottom: 1px solid;
 }
+
 .opts {
 	padding: 20px 10px;
 	background: ;
@@ -61,7 +62,7 @@ button {
 	border-radius: 5px;
 	border: none;
 	box-shadow: 0 5px 0 #000;
-	color:#fff;
+	color: #fff;
 }
 
 button:active {
@@ -90,16 +91,7 @@ input[type=radio] {
 	font-size: 1rem;
 }
 
-
-.error {
-	color: red;
-	text-align: center;
-	font-size: 0.9rem;
-	margin-top: 20px;
-	visibility: hidden;
-}
-
-label > div {
+label>div {
 	position: absolute;
 	height: 100%;
 	width: 0%;
@@ -108,9 +100,9 @@ label > div {
 	background: #46C5E9;
 	transition: 0.4s;
 	z-index: -1;
-} 
+}
 
-label > .opt {
+label>.opt {
 	position: absolute;
 	background: ;
 	display: flex;
@@ -138,9 +130,25 @@ label > .opt {
 	transition: 0.3s;
 }
 
-.note {
+.note,
+.error {
 	background: #ff7;
 	text-align: center;
 	border-radius: 5px;
 	padding: 10px 20px;
+}
+
+.error {
+	background: red;
+	color: white;
+}
+
+@media screen and (min-width : 760px) {
+
+	form {
+		--w: 30%;
+		width: var(--w);
+		position: fixed;
+		left: calc(50% - var(--w) / 2);
+	}
 }
