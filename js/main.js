@@ -22,7 +22,7 @@ $$("label").forEach(l => l.addEventListener("click", function() {
 $("form").addEventListener("submit", submit);
 
 function setBars({ a1, a2, a3, a4 }) {
-	let pi = (a) => parseInt(a);
+	let pi = (a) => Math.round(a);
 	a1 = pi(a1);
 	a2 = pi(a2);
 	a3 = pi(a3);
