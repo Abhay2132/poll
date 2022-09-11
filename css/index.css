@@ -151,4 +151,8 @@ label>.opt {
 		position: fixed;
 		left: calc(50% - var(--w) / 2);
 	}
+
+	::-webkit-scrollbar {
+		display: none;
+	}
 }
