@@ -12,7 +12,7 @@ function submit() {
 	$$("input[name=option]").forEach(i => (i.checked && (ans = i.value)));
 	console.table({ name, ans })
 
-	if (!name.match(/[a-zA-Z0-9]{5,11}/g)) return { error: `username should should be 5 - 10 character and Alpha-Numeric Only !` }
+	if (!name.match(/[a-zA-Z0-9_]{5,21}/g)) return { error: `username should should be 5 - 20 character and Alpha-Numeric Only !` }
 	postVote({ name, ans })
 		.then(t => setBars(t));
 }

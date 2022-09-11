@@ -12,7 +12,7 @@
 <body>
 	<h1> Voting Poll ! </h1>
 	<form onsubmit="return false;" enctype="multipart/form-data">
-		<input title="Name should be 5 - 10 characters ( number and alphabets only ) " type="search" class="uid" pattern="[a-zA-Z0-9]{5,10}" placeholder="Your name" name="uid" required />
+		<input title="Name should be 5 - 20 characters ( number and alphabets only ) " type="search" class="uid" pattern="[a-zA-Z0-9_]{5,21}" placeholder="Your name" name="uid" required />
 		<p class="q"> <big>Q. </big>How to get a bunch of like in your code ? </p>
 		<div class="opts">
 			<label for="a1">
@@ -45,6 +45,8 @@
 		<button> Submit </button>
 		<p class="note" id="msg"> Like this code so we can get more votes 😁 </p>
 	</form>
+
+	<a class="git-link" href="https://github.com/Abhay2132/poll" target="_blank"><img src="https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png">Source</a>
 </body>
 <script src="js/main.js" type="module"></script>
 
