@@ -1,8 +1,5 @@
 import { postVote } from "./fb.js";
 
-postVote({ name: "Abhay", ans: "a1" })
-	.then(console.log)
-
 const $ = (a) => document.querySelector(a);
 const $$ = (a) => document.querySelectorAll(a);
 
@@ -10,7 +7,7 @@ function submit() {
 	let name = $(".uid").value.trim();
 	let ans = ""
 	$$("input[name=option]").forEach(i => (i.checked && (ans = i.value)));
-	console.table({ name, ans })
+	//console.table({ name, ans })
 
 	if (!name.match(/[a-zA-Z0-9_]{5,21}/g)) return { error: `username should should be 5 - 20 character and Alpha-Numeric Only !` }
 	postVote({ name, ans })
@@ -30,7 +27,7 @@ function setBars({ a1, a2, a3, a4 }) {
 	a2 = pi(a2);
 	a3 = pi(a3);
 	a4 = pi(a4);
-	console.log({ a1, a2, a3, a4 })
+	//console.log({ a1, a2, a3, a4 })
 	let total = a1 + a2 + a3 + a4;
 	let p1 = a1 == 0 ? '0%' : (a1 / total).toFixed(1) * 100 + '%';
 	let p2 = a2 == 0 ? '0%' : (a2 / total).toFixed(1) * 100 + '%';
@@ -52,7 +49,7 @@ function setBars({ a1, a2, a3, a4 }) {
 	$(".vote_cc").style.transform = "translateX(0)";
 	$(".total_votes").innerHTML = total;
 
-	console.table({ p1, p2, p3, p4, total })
+	//console.table({ p1, p2, p3, p4, total })
 }
 
 window.showError = function showError(msg) {

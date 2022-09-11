@@ -16,7 +16,7 @@ const db = getFirestore(app);
 async function postVote({ name, ans }) {
   const questions = collection(db, 'Voting-poll');
   const qsSnapshot = await getDocs(questions);
-  // console.log({qsSnapshot , docs : qsSnapshot.docs})
+  //console.log({qsSnapshot , docs : qsSnapshot.docs})
   var qdata = qsSnapshot.docs.map(doc => doc.data());
   var qdata = dataSanatilzer({ name, ans, data: qdata[0] });
 
